@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mrs+Saint+Delafield&display=swap');
+
+:root{
+    --cor-principal: #A66933;
+    --cor-secundaria: #731F1F;
+    --cor-secundaria-escura: #521616;
+    --bnt-color: rgba(0, 0, 0, 0.1);
+    --bnt-color-hover: rgba(0, 0, 0, 0.3);
+    --claro: #F2DBAE;
+    --sucesso: #F1C884;
+    --texto: #FDF9E9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: var(--texto);
+}
+
+header{
+    position: fixed;
+}
+
+.letreiro-container{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap; /* Impede que o texto quebre de linha */
+    gap: 3rem;
+    background-color: var(--cor-secundaria);
+    color: var(--claro);
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0.8rem 0;
+}
+
+.letreiro{
+    animation: letreiro 10s linear infinite;
+}
+
+main {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgb(20, 20, 20), rgba(0, 0, 0, 0.5)), url('imagens/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 10%;
+}
+
+.slide-quiz{
+    display: none;
+}
+
+.ativo{
+    display: block;
+}
+
+h2{
+    font-family: "Inter", Helvetica Neue, sans-serif;
+    color: var(--texto);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+img{
+    width: 500px;
+    padding-bottom: 5%;
+}
+
+.descricao{
+    font-size: 1.2rem;
+    padding-bottom: 3%;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    background: var(--bnt-color);
+    color: var(--texto);
+    cursor:text;
+}
+
+input:hover{
+    background: var(--bnt-color-hover);
+    border: 2px solid var(--claro);
+    transition: 0.3s;
+}
+
+.bnt-proximo{
+    width: 100px;
+    height: 40px;
+    color: var(--claro);
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.inicio{
+    background-color: var(--cor-secundaria);
+}
+
+.slide{
+    background-color: var(--cor-principal);
+}
+
+.inicio:hover{
+    background-color: var(--cor-secundaria-escura);
+    transition: 0.3s;
+}
+
+.slide:hover{
+    background-color: var(--claro);
+    color: var(--cor-secundaria);
+    transition: 0.3s;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: var(--cor-principal);
+    text-shadow: var(--erro);
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+h1 span{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h3{
+    color: var(--texto);
+    font-weight: 400;
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+}
+
+.respostas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3%;
+    row-gap: 10%;
+    margin: 3% 0 6%;
+}
+
+.bnt-opcao{
+    width: auto;
+    height: auto;
+    background-color: var(--bnt-color);
+    border: 1.5px solid var(--texto);
+    color: var(--texto);
+    cursor: pointer;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 4% 0;
+}
+
+.bnt-opcao:hover{
+    border: none;
+    transition: 0.2s;
+    transform: scale(0.8);
+}
+
+.errada{
+    border: none;
+    box-shadow: 0 0 20px var(--cor-secundaria);
+    color: var(--cor-secundaria);
+    font-weight: 600;
+}
+
+.certa{
+    border: none;
+    box-shadow: 0 0 20px var(--cor-principal);
+    color: var(--cor-principal);
+    font-weight: 600;
+}
+
+.selecionada{
+    animation: pisca 1s infinite;
+}
+
+i{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0px 0px 0px 20px;
+}
+
+@keyframes pisca {
+    0% {
+       opacity: 1;
+       transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes letreiro {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+

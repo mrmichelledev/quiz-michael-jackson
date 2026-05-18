@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Michael Jackson - Quiz</title>
+</head>
+<body>
+    <header>
+        <div class="letreiro-container">
+            <p class="letreiro">★  Será que você dança conforme a música ou vai levar um 'Thriller' nesse quiz?  ★</p>
+            <p class="letreiro">★  Será que você dança conforme a música ou vai levar um 'Thriller' nesse quiz?  ★</p>
+            <p class="letreiro">★  Será que você dança conforme a música ou vai levar um 'Thriller' nesse quiz?  ★</p>
+            <p class="letreiro">★  Será que você dança conforme a música ou vai levar um 'Thriller' nesse quiz?  ★</p>
+            <p class="letreiro">★  Será que você dança conforme a música ou vai levar um 'Thriller' nesse quiz?  ★</p>
+        </div>
+    </header>
+    <main>
+        <section class="quiz-slider">
+            <article class="slide-quiz ativo">
+                <h2>QUIZ DO LORD</h2>
+                <!-- <h1>Micheal Jackson</h1> -->
+                <img src="imagens/michael.png" alt="Texto escrito Michael">
+            
+        
+                <p class="descricao">Chegou a hora de provar que você não é apenas um Smooth Criminal e que conhece cada passo da lenda! Será que você consegue acompanhar o ritmo do mestre ou vai acabar saindo do compasso? Responda às perguntas e descubra se você é um expert ou se ainda precisa praticar uns passos na frente do espelho... Dê o play e divirta-se!</p>
+
+                <input type="text" name="user-name" id="user-name" placeholder="Digite seu nome">
+
+                <button type="button" class="bnt-proximo inicio" onclick="proximoSlide()" disabled="true">play</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h1><span>1</span> / 10</h1>
+                <h3 class="pergunta">Qual era o nome do chimpanzé de estimação que Michael levava para todo lugar, inclusive para comer na mesa com talheres?</h3>
+
+                <div class="respostas">
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Lord Kin</button>
+                    <button type="button" class="bnt-opcao" data-resposta-correta="true" onclick="check(this)">Bubbles</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Caesar</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Abu</button>
+                </div>
+
+                <button type="button" class="bnt-proximo slide" onclick="proximoSlide()" disabled="true">proximo</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h1><span>2</span> / 10</h1>
+                <h3 class="pergunta">Qual álbum de Michael Jackson é o mais vendido da história?</h3>
+
+                <div class="respostas">
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Bad</button>
+                    <button type="button" class="bnt-opcao" data-resposta-correta="true" onclick="check(this)">Thriller</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Off the Wall</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Dangerous</button>
+                </div>
+
+                <button type="button" class="bnt-proximo slide " onclick="proximoSlide()" disabled="true">proximo</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h1><span>3</span> / 10</h1>
+                <h3 class="pergunta">Em qual música ele pergunta repetidamente "Annie, are you OK?"?</h3>
+
+                <div class="respostas">
+                    <button type="button" class="bnt-opcao" data-resposta-correta="true" onclick="check(this)">Smooth Criminal</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Beat It</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Billie Jean</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Bad</button>
+                </div>
+
+                <button type="button" class="bnt-proximo slide " onclick="proximoSlide()" disabled="true">proximo</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h1><span>4</span> / 10</h1>
+                <h3 class="pergunta">Qual super-herói Michael Jackson tentou comprar os direitos (e o estúdio) apenas porque ele queria interpretar o personagem no cinema?</h3>
+
+                <div class="respostas">
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Batman</button>
+                    <button type="button" class="bnt-opcao" data-resposta-correta="true" onclick="check(this)">Homem Aranha</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Superman</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Home de Ferro</button>
+                </div>
+
+                <button type="button" class="bnt-proximo slide " onclick="proximoSlide()" disabled="true">proximo</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h1><span>5</span> / 10</h1>
+                <h3 class="pergunta">Em que ano o mundo se despediu do Rei do Pop?</h3>
+
+                <div class="respostas">
+                    <button type="button" class="bnt-opcao" onclick="check(this)">2005</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">2007</button>
+                    <button type="button" class="bnt-opcao" data-resposta-correta="true" onclick="check(this)">2009</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">2011</button>
+                </div>
+
+                <button type="button" class="bnt-proximo slide " onclick="proximoSlide()" disabled="true">proximo</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h1><span>6</span> / 10</h1>
+                <h3 class="pergunta">Quem tocou o solo de guitarra lendário na música "Beat It"</h3>
+
+                <div class="respostas">
+                    <button type="button" class="bnt-opcao" data-resposta-correta="true" onclick="check(this)">Eddie Van Halen</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Slash</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Carlos Santana</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Brian May</button>
+                </div>
+
+                <button type="button" class="bnt-proximo slide " onclick="proximoSlide()" disabled="true">proximo</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h1><span>7</span> / 10</h1>
+                <h3 class="pergunta">Por que Michael Jackson costumava usar um esparadrapo branco na ponta dos dedos?</h3>
+
+                <div class="respostas">
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Porque ele roía as unhas</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Para não escorregar ao estalar os dedos</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Ele tinha uma alergia rara ao microfone</button>
+                    <button type="button" class="bnt-opcao" data-resposta-correta="true" onclick="check(this)">Para chamar a atenção para os movimentos das suas mãos na dança</button>
+                </div>
+
+                <button type="button" class="bnt-proximo slide " onclick="proximoSlide()" disabled="true">proximo</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h1><span>8</span> / 10</h1>
+                <h3 class="pergunta">Qual o nome do rancho que ele transformou em um parque de diversões?</h3>
+
+                <div class="respostas">
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Graceland</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Paisley Park</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Xanadu</button>
+                    <button type="button" class="bnt-opcao" data-resposta-correta="true" onclick="check(this)">Neverland</button>
+                </div>
+
+                <button type="button" class="bnt-proximo slide " onclick="proximoSlide()" disabled="true">proximo</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h1><span>9</span> / 10</h1>
+                <h3 class="pergunta">Michael Jackson convidou um famoso cantor para fazer um dueto na música "Bad", mas ele recusou porque não queria cantar a frase: "Seu bumbum é meu". Quem era esse artista?</h3>
+
+                <div class="respostas">
+                    <button type="button" class="bnt-opcao">Freddie Mercury</button>
+                    <button type="button" class="bnt-opcao" data-resposta-correta="true" onclick="check(this)">Prince</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">David Bowie</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">George Michael</button>
+                </div>
+
+                <button type="button" class="bnt-proximo slide " onclick="proximoSlide()" disabled="true">proximo</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h1>10/10</h1>
+                <h3 class="pergunta">Qual destas músicas NÃO é de Michael Jackson?</h3>
+
+                <div class="respostas">
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Wanna Be Startin' Somethin'</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">Baby Be Mine</button>
+                    <button type="button" class="bnt-opcao" data-resposta-correta="true" onclick="check(this)">Dont't Stop The Music</button>
+                    <button type="button" class="bnt-opcao" onclick="check(this)">P.Y.T(Pretty Young Thing)</button>
+                </div>
+
+                <button type="button" class="bnt-proximo slide " onclick="proximoSlide()" disabled="true">proximo</button>
+            </article>
+
+            <article class="slide-quiz">
+                <h2>Parabéns, você completou o quiz!</h2>
+                <p class="resultado"></p>
+            </article>
+
+        </section>
+    </main>
+    
+</body>
+<script src="script.js"></script>
+</html>
