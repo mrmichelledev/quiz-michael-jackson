@@ -84,7 +84,8 @@ h2{
 }
 
 img{
-    width: 500px;
+    width: 80%;
+    max-width: 500px;
     padding-bottom: 5%;
 }
 
@@ -215,6 +216,12 @@ i{
     padding: 0px 0px 0px 20px;
 }
 
+h3 span{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--cor-principal);
+}
+
 @keyframes pisca {
     0% {
        opacity: 1;
@@ -240,4 +247,33 @@ i{
 	}
 }
 
+@media (max-width: 768px){
+    h2{
+        font-size: 0.7rem;
+    }
 
+    img{
+        padding-bottom: 10%;
+    }
+    .descricao{
+        font-size: 0.7rem;
+        padding-bottom: 10%;
+    }
+
+    input{
+        width: 60%;
+    }
+
+    .bnt-proximo{
+        height: 40px;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    .respostas{
+        grid-template-columns: 1fr;
+        margin-bottom: 25%;
+    }
+}

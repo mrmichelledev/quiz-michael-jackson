@@ -3,6 +3,8 @@ let slides = document.querySelectorAll('.slide-quiz');
 let liberaPlay = document.querySelector('.inicio');
 let resultado = document.querySelector('.resultado');
 
+console.log(resultado);
+
 let numeroSlide = 0;
 let pontos = 0;
 
@@ -13,14 +15,17 @@ username.addEventListener('input', () => {
 
 function proximoSlide(){
 
-    if(numeroSlide == slides.length - 1){
-        alert(`Parabéns, ${username.value}! Você concluiu o quiz com ${pontos} acertos!`);
-        location.reload();
-    } else {
+    if(numeroSlide <= slides.length-1){
         numeroSlide++;
         slides[numeroSlide - 1].classList.remove('ativo');
         slides[numeroSlide].classList.add('ativo');
+    
     }
+
+    resultado.innerHTML = `
+  Parabéns, <span>${username.value}</span>!<br>Você concluiu o quiz com <span>${pontos} acertos!</span>`;
+
+    console.log("teste");
 }
 
 function check(thisButton){
