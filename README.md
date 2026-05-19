@@ -2,7 +2,8 @@
 
 Um quiz divertido e interativo sobre o Rei do Pop, com perguntas sobre músicas, curiosidades, memes e momentos icônicos da carreira de Michael Jackson.
 
-🔗 **Projeto online:** https://mrmichelledev.github.io/quiz-michael-jackson/
+🔗 **Projeto online:** https://mrmichelledev.github.io/quiz-michael-jackson/ <br>
+📌 **Desafio do roadmap.sh:** https://roadmap.sh/projects/quiz-app
 
 ---
 
